@@ -1,1 +1,1 @@
-# Odor intensity classification
+# Odor intensity classification model

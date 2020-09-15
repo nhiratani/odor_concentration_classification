@@ -1,4 +1,4 @@
-# Odor intensity classification model
+# Odor concentration classification model
 
 This is a model associated with a manuscript entitled
     

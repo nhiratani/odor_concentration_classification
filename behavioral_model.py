@@ -31,9 +31,7 @@ def accuracy(cmin, r_low, r_high, a1, a2): #estimate the accuracy
     log_lowc_th = mus[2] + r_low*(mus[5]-mus[2])
     log_highc_th = mus[0] + r_high*(mus[3]-mus[0])
     
-    lowc_accuracy = jnp.zeros((clen))
-    highc_accuracy = jnp.zeros((clen))
-    diff_target_low = 0.0; diff_target_high = 0.0
+    lowc_accuracy = jnp.zeros((clen)); highc_accuracy = jnp.zeros((clen))
     
     lowc_phi = phi(log_lowc_th*cones - mus, sigma2s)
     highc_phi = phi(log_highc_th*cones - mus, sigma2s)

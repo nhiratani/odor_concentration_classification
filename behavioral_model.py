@@ -69,7 +69,7 @@ def fitting(eta, ilmax, ik):
     #ps: (cmin, r_low, r_high, a1, a2)
     plen = 5 #number of parameters
     pranges = jnp.array([[0.00003, 0.0, 0.0, 0.0, 0.0],\
-                         [0.015,   1.0, 1.0, 1.0, 1.0]])
+                         [0.015,   1.0, 1.0, 1.0, 1.0]]) #lower and upper bounds of the parameters 
     pscales = jnp.array([0.01, 1.0, 1.0, 1.0, 0.1])
     ps = jnp.multiply(pscales, random.uniform(key, shape=([plen]), minval=0.0, maxval=1.0))
     
@@ -84,7 +84,6 @@ def fitting(eta, ilmax, ik):
             pgrads[q] = grad_func[q](ps[0], ps[1], ps[2], ps[3], ps[4])
         ps = ps - eta*jnp.multiply(pscales, jnp.array(pgrads))
         ps = jnp.clip(ps, pranges[0], pranges[1])
-    print('ps: ', ps)
     plot_fig(ps)
 
 

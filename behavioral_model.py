@@ -1,5 +1,5 @@
 #
-# A model of odor concentration classification task
+# A model of an odor concentration classification task
 #
 # Author: Naoki Hiratani (N.Hiratani@gmail.com)
 #
